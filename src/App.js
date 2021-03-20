@@ -10,7 +10,7 @@ function App() {
         <Weather />
         <br />
         <div class="footer">
-          <a href="https://github.com/schtepfi/weather-react" target="_blank"
+          <a href="https://github.com/schtepfi/weather-react" target=""
           >Open-source code</a
           >, by Stephanie Schlaepfer
           </div>
