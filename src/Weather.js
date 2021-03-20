@@ -55,6 +55,7 @@ export default function Search() {
                     <li>Wind Speed: {Math.round(wind)} km/h</li>
                     <img src={icon} alt={description} />
                 </ul>
+                <p>What did one raindrop say to the other? Two's company, three's a cloud.</p>
             </div>
         );
     } else {

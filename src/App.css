@@ -1,5 +1,39 @@
 .App {
   text-align: center;
+  font-family: Comic Sans MS, Comic Sans, cursive;
+  padding: 25px 0px;
+  max-width: 710px;
+  margin: 0px auto;
+}
+
+.App h1 {
+  text-transform: uppercase;
+  color: #588790;
+  text-align: center;
+  line-height: 1.5;
+  padding: 20px 0 10px;
+  margin: 0;
+}
+
+li {
+  list-style-type: none;
+}
+
+p {
+  text-align: center;
+  font-family: "Indie Flower", cursive;
+  font-size: 25px;
+  font-weight: 700;
+  padding: 20px 0;
+  color: #588790;
+  border-top: 4px double #588790;
+  border-bottom: 4px double #588790;
+  margin: 20px 100px 40px;
+}
+
+input:hover {
+  color: #588790;
+  border: 4px single #588790;
 }
 
 .App-logo {
@@ -11,17 +45,6 @@
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
   }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
 .App-link {
