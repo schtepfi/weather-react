@@ -1,64 +1,58 @@
-import React, { useState } from "react";
-import axios from 'axios';
+import React from "react";
+import "./Weather.css";
 
-export default function Search() {
-    const [city, setCity] = useState("");
-    const [temperature, setTemperature] = useState("");
-    const [description, setDescription] = useState("");
-    const [humidity, setHumidity] = useState("");
-    const [wind, setWind] = useState("");
-    const [icon, setIcon] = useState("");
-
-    function showWeather(response) {
-        setCity(response.data.name);
-        setTemperature(response.data.main.temp);
-        setDescription(response.data.weather[0].description);
-        setHumidity(response.data.main.humidity);
-        setWind(response.data.wind.speed);
-        setIcon(
-            `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
-        );
-    }
-
-    function handleSubmit(event) {
-        event.preventDefault();
-        let apiKey = "c0a2579dbc68074c7c325b759cdecd5c";
-        let units = "metric";
-        let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=${units}`;
-
-        axios.get(apiUrl).then(showWeather);
-    }
-
-    function updateCity(event) {
-        setCity(event.target.value);
-    }
-
-    let form = (
-        <form onSubmit={handleSubmit}>
-            <input
-                type="Search"
-                placeholder="Enter a city..."
-                onChange={updateCity}
-            />
-            <input type="Submit" value="Search" />
-        </form>
-    );
-
-    if (description) {
-        return (
-            <div>
-                {form}
-                <ul>
-                    <li>Temperature: {Math.round(temperature)}ºC</li>
-                    <li>Description: {description} </li>
-                    <li>Humidity: {Math.round(humidity)}%</li>
-                    <li>Wind Speed: {Math.round(wind)} km/h</li>
-                    <img src={icon} alt={description} />
-                </ul>
-                <p>What did one raindrop say to the other? Two's company, three's a cloud.</p>
+export default function Weather() {
+    return (
+        <div className="Weather">
+            <h1>Weather Channel</h1>
+            <form>
+                <div className="row">
+                    <div class="form-group w-75">
+                        <div className="col-10">
+                            <input
+                                type="search"
+                                placeholder="Enter a city..."
+                                className="form-control"
+                                autofocus="on"
+                                autocomplete="off"
+                                id="search-text-input"
+                            />
+                        </div>
+                    </div>
+                    <div className="col-2">
+                        <input type="submit" value="Search" className="btn btn-light" />
+                    </div>
+                </div>
+            </form >
+            <h2 className="currentLocation">Bern</h2>
+            <ul>
+                <li className="currentDate">Tuesday, 23.03.2021</li>
+                <li className="weatherDescription">Mostly Cloudy</li>
+            </ul>
+            <div className="row mt-3">
+                <div className="col-6">
+                    <div className="clearfix">
+                        <img
+                            src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png"
+                            alt="Mostly Cloudy"
+                            className="float-left"
+                        />
+                        <div className="float-left">
+                            <span className="currentTemperature">23</span>
+                            <span className="units">
+                                <a href="#" className="active">°C </a> | <a href="#">°F</a></span>
+                        </div>
+                    </div>
+                </div>
+                <div className="col-6">
+                    <ul>
+                        <li>💦 Humidity: 13%</li>
+                        <li>💨 Wind: 5km/h</li>
+                    </ul>
+                </div>
             </div>
-        );
-    } else {
-        return form;
-    }
+            <p>The Weather is Sunny and nice</p>
+            <h2 className="future">The Future</h2>
+        </div >
+    );
 }
