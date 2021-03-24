@@ -40,7 +40,7 @@ export default function Weather() {
                         <div className="float-left">
                             <span className="currentTemperature">23</span>
                             <span className="units">
-                                <a href="#" className="active">°C </a> | <a href="#">°F</a></span>
+                                <a href=" ">°C </a> | <a href=" ">°F</a></span>
                         </div>
                     </div>
                 </div>

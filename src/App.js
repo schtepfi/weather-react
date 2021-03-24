@@ -8,7 +8,7 @@ function App() {
       <div class="container">
         <Weather />
         <footer>
-          <a href="https://github.com/schtepfi/weather-app" target="_blank"
+          <a href="https://github.com/schtepfi/weather-app" target=""
           >Open-source code</a>, by Stephanie Schlaepfer
         </footer>
       </div>
