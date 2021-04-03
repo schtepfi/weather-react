@@ -28,7 +28,7 @@
 }
 
 .Weather .units {
-  vertical-align: 80%;
+  vertical-align: 100%;
   margin-left: 5px;
 }
 
@@ -49,21 +49,15 @@ margin-top: 10px;
 display: inline-block;
 }
 
-.Weather p {
+.Weather .future {
+  text-transform: uppercase;
   text-align: center;
+  padding: 10px;
+  border-bottom: 2px solid #588790;
   font-size: 25px;
   font-weight: 700;
-  padding: 20px 0;
   color: #588790;
   border-top: 4px double #588790;
   border-bottom: 4px double #588790;
   margin: 20px 0px 40px;
-}
-.Weather .future {
-  text-transform: uppercase;
-  text-align: center;
-  color: #588790;
-  padding: 10px;
-  border-bottom: 2px solid #588790;
-  margin: 0 100px 20px;
 }

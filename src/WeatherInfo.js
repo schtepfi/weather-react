@@ -28,13 +28,12 @@ export default function WeatherInfo(props) {
         <div className="col-6">
           <div className="float-right">
             <ul>
-              <li>💦 Humidity: {props.data.humidity}%</li>
-              <li>💨 Wind: {props.data.wind}km/h</li>
+              <li>💦 Humidity: {Math.round(props.data.humidity)}%</li>
+              <li>💨 Wind: {Math.round(props.data.wind)}km/h</li>
             </ul>
           </div>
         </div>
       </div>
-      <p>The Weather is Sunny and nice</p>
       <h2 className="future">The Future</h2>
     </div >
   );

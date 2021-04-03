@@ -31,6 +31,7 @@ export default function Weather(props) {
         setCity(event.target.value);
     }
 
+
     function search() {
         const apiKey = "c0a2579dbc68074c7c325b759cdecd5c";
         let unit = "metric";
