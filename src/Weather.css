@@ -20,7 +20,7 @@
   margin-bottom: 20px;
 }
 
-.Weather .currentTemperature {
+.Weather .temperature {
   line-height: 64px;
   font-size: 48px;
   display: inline;

@@ -6,7 +6,7 @@ function App() {
   return (
     <div className="App">
       <div class="container">
-        <Weather defaultCity="London" />
+        <Weather defaultCity="Bern" />
         <footer>
           <a href="https://github.com/schtepfi/weather-app" target=""
           >Open-source code</a>, by Stephanie Schlaepfer
