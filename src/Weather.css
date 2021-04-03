@@ -5,9 +5,11 @@
   background-color: #B4C9D5;
   padding: 0px 0px 20px;
   border-radius: 4px;
+  padding: 0px 60px;
 } 
 .Weather h1 {
   text-transform: uppercase;
+  font-weight: 700;
   color: #588790;
   text-align: center;
   line-height: 1.5;
@@ -16,47 +18,46 @@
 
 .Weather form {
   margin-bottom: 20px;
-  padding: 0px 70px 0px 100px;
 }
 
 .Weather .currentTemperature {
   line-height: 64px;
-  font-size: 35px;
+  font-size: 48px;
   display: inline;
+  margin-left: 10px;
 }
 
 .Weather .units {
-  vertical-align: 50%;
+  vertical-align: 80%;
   margin-left: 5px;
 }
 
 .Weather .currentLocation {
   font-size: 30px;
-  padding: 0px  0px 0px 100px;
 }
 
 .Weather ul {
 margin: 0;
-padding: 0px 70px 0px 100px;
+padding: 0;
 }
+
 .Weather li {
   list-style: none;
 }
-.Weather img {
-  padding: 0px 0px 0px 100px;
-  margin-right: 10px;
-
+.Weather canvas {
+margin-top: 10px;
+display: inline-block;
 }
+
 .Weather p {
   text-align: center;
-  font-family: "Indie Flower", cursive;
   font-size: 25px;
   font-weight: 700;
   padding: 20px 0;
   color: #588790;
   border-top: 4px double #588790;
   border-bottom: 4px double #588790;
-  margin: 20px 100px 40px;
+  margin: 20px 0px 40px;
 }
 .Weather .future {
   text-transform: uppercase;
@@ -64,5 +65,5 @@ padding: 0px 70px 0px 100px;
   color: #588790;
   padding: 10px;
   border-bottom: 2px solid #588790;
-  margin: 0 200px;
+  margin: 0 100px 20px;
 }
