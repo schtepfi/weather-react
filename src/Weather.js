@@ -7,6 +7,7 @@ import "./Weather.css";
 export default function Weather(props) {
     const [weatherData, setWeatherData] = useState({ ready: false });
     const [city, setCity] = useState(props.defaultCity);
+    const [unit, setUnit] = useState("celsius");
 
     function handleResponse(response) {
         setWeatherData({
@@ -31,7 +32,6 @@ export default function Weather(props) {
         setCity(event.target.value);
     }
 
-
     function search() {
         const apiKey = "c0a2579dbc68074c7c325b759cdecd5c";
         let unit = "metric";
@@ -45,29 +45,27 @@ export default function Weather(props) {
                 <h1>Weather Channel</h1>
                 <form onSubmit={handleSubmit}>
                     <div className="row">
-                        <div class="form-group w-75">
-                            <div className="col-10">
-                                <input
-                                    type="search"
-                                    placeholder="Enter a city..."
-                                    className="form-control"
-                                    autofocus="on"
-                                    autocomplete="off"
-                                    onChange={handleCityChange}
-                                />
-                            </div>
+                        <div className="col-10">
+                            <input
+                                type="search"
+                                placeholder="Enter a city..."
+                                className="form-control form-control-lg mb-4"
+                                autofocus="on"
+                                autocomplete="off"
+                                onChange={handleCityChange}
+                            />
                         </div>
                         <div className="col-2">
-                            <input type="submit" value="Search" className="btn btn-light" />
+                            <input type="submit" value="🔍" className="button" />
                         </div>
                     </div>
-                </form >
-                <WeatherInfo data={weatherData} />
-                <WeatherForecast coordinates={weatherData.coordinates} />
+                </form>
+                <WeatherInfo data={weatherData} unit={unit} setUnit={setUnit} />
+                <WeatherForecast coordinates={weatherData.coordinates} unit={unit} />
             </div>
         );
     } else {
         search();
-        return "loading...";
+        return "Please give us a moment while the page is loading...";
     }
 }

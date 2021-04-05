@@ -13,25 +13,25 @@ export default function FormattedDate(props) {
     let day = days[props.date.getDay()];
     let date = props.date.getDate();
     let months = [
-        "01",
-        "02",
-        "03",
-        "04",
-        "05",
-        "06",
-        "07",
-        "08",
-        "09",
-        "10",
-        "11",
-        "12"
+        "January",
+        "February",
+        "March",
+        "April",
+        "May",
+        "June",
+        "July",
+        "August",
+        "September",
+        "October",
+        "November",
+        "December"
     ];
     let month = months[props.date.getMonth()]
     let year = props.date.getFullYear();
 
     return (
         <div>
-            {day}, {date}.{month}.{year}
+            {day}, {date}. {month} {year}
         </div>
     );
 }

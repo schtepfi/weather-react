@@ -18,6 +18,37 @@
 
 .Weather form {
   margin-bottom: 20px;
+  padding-left: 15px;
+}
+
+.Weather input::placeholder {
+  font-size: 20px;
+}
+
+.Weather .button {
+  position: absolute;
+  font-size: 22px;
+  color: #588790;
+  padding: 5px 10px;
+  right: 35px;
+  border: 1px solid #588790;
+  background: white;
+  border-radius: 10px;
+  transition: all 200ms ease;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+}
+.Weather .button:hover {
+  color: #588790;
+  border: 4px double #588790;
+}
+
+.Weather .WeatherDescription {
+  font-size: 20px;
+  color: white;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  font-weight: 700;
 }
 
 .Weather .temperature {
@@ -53,7 +84,6 @@ display: inline-block;
   text-transform: uppercase;
   text-align: center;
   padding: 10px;
-  border-bottom: 2px solid #588790;
   font-size: 25px;
   font-weight: 700;
   color: #588790;
